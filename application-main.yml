@@ -1,18 +1,5 @@
-server:
-  port: 9989
+
 spring:
-  application:
-    name: service-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/yanzhishuo/xiaoyingresourses.git  # 填写你自己的github的仓库名称       #这个uri用ssh地址一直都是无法访问，只有改成https地址加privateKey或者显示声明账号密码才有用
-          username: yanzhishuo
-          password: yzs19951208
-          search-paths:
-            - xiaoyingresourses  #搜索目录
-      label: main
   datasource:
     username: root
     password: 123456
