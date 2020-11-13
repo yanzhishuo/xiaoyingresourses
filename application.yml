@@ -1,0 +1,19 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: service-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chaoxinxing/configuration.git  # 填写你自己的github的仓库名称       #这个uri用ssh地址一直都是无法访问，只有改成https地址加privateKey或者显示声明账号密码才有用
+          username: mzhyang
+          password: ymz19951207
+          search-paths:
+            - configuration  #搜索目录
+      label: main     #读取分支
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka,http://eureka8002.com:8002/eureka,http://eureka8001.com:8003/eureka
